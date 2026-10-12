@@ -1,17 +1,7 @@
-// Week 7: Migrating Your Interactive Portfolio to React
-// The Week 6 portfolio (index.html + styles.css + script.js) migrated into ONE component.
-// Reference copies of the original Week 6 files live in my-week6/.
-
 import { useEffect } from 'react'
 import './App.css'
 
 function App() {
-  // ============================================
-  // PART 1: EVENT HANDLER FUNCTIONS
-  // ============================================
-
-  // --- Smooth scroll navigation ---
-  // Week 6: navLinks.forEach(link => link.addEventListener('click', ...))
   const handleNavClick = (e) => {
     e.preventDefault()
 
@@ -22,13 +12,10 @@ function App() {
       targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
 
-    // Close the mobile menu after picking a link (Week 6 did this too)
     document.querySelector('.nav-menu').classList.remove('active')
     document.querySelector('.nav-toggle').classList.remove('active')
   }
 
-  // --- Active nav highlighting on scroll ---
-  // Week 6: window.addEventListener('scroll', ...)
   const handleScroll = () => {
     const sections = document.querySelectorAll('section')
     const scrollPos = window.scrollY + 100
@@ -49,16 +36,11 @@ function App() {
     })
   }
 
-  // Attach the window listener once on load, remove it on unload (README Part 4 Step 4).
-  // Calling window.addEventListener directly in the component body would add a new
-  // listener on every render, so it lives inside useEffect instead.
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // --- Project filtering ---
-  // Week 6: filterButtons.forEach(button => button.addEventListener('click', ...))
   const filterProjects = (category) => {
     const projectCards = document.querySelectorAll('.project-card')
 
@@ -81,14 +63,11 @@ function App() {
     filterProjects(filterValue)
   }
 
-  // --- Mobile menu toggle ---
-  // Week 6: navToggle.addEventListener('click', ...)
   const handleMobileMenuToggle = () => {
     document.querySelector('.nav-menu').classList.toggle('active')
     document.querySelector('.nav-toggle').classList.toggle('active')
   }
 
-  // --- Form validation helpers (unchanged from Week 6) ---
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
@@ -121,7 +100,6 @@ function App() {
     input.classList.remove('error')
   }
 
-  // One validator per field, shared by the live (onChange) checks and the submit check
   const validateName = (input) => {
     if (input.value.trim().length < 2) {
       showError(input, 'Name must be at least 2 characters')
@@ -149,15 +127,10 @@ function App() {
     return true
   }
 
-  // --- Real-time validation ---
-  // Week 6: nameInput.addEventListener('input', ...) etc.
-  // React's onChange fires on every keystroke, like the native 'input' event.
   const handleNameInput = (e) => validateName(e.currentTarget)
   const handleEmailInput = (e) => validateEmail(e.currentTarget)
   const handleMessageInput = (e) => validateMessage(e.currentTarget)
 
-  // --- Form submit ---
-  // Week 6: contactForm.addEventListener('submit', ...)
   const handleFormSubmit = (e) => {
     e.preventDefault()
 
@@ -166,7 +139,6 @@ function App() {
     const emailInput = document.querySelector('#email')
     const messageInput = document.querySelector('#message')
 
-    // Run every validator (no short-circuit) so all errors show at once
     const nameOk = validateName(nameInput)
     const emailOk = validateEmail(emailInput)
     const messageOk = validateMessage(messageInput)
@@ -189,12 +161,6 @@ function App() {
     }
   }
 
-  // Note: Week 6's animateSkills() is intentionally left out. The --skill-level
-  // custom property on each .skill-progress drives the CSS width and fill animation.
-
-  // ============================================
-  // PART 2: JSX RETURN STATEMENT
-  // ============================================
   return (
     <div className="portfolio">
       {/* Navigation Bar */}

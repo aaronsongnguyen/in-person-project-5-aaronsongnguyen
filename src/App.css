@@ -287,8 +287,6 @@ a:hover {
     animation: fillProgress 1s ease forwards;
 }
 
-/* The --skill-level custom property set in the JSX drives the bar width,
-   so no JavaScript (Week 6 animateSkills) is needed in React. */
 @keyframes fillProgress {
     from { width: 0; }
     to { width: var(--skill-level); }
