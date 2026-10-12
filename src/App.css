@@ -80,6 +80,9 @@ a:hover {
 
 /* Navigation Bar - TO BE ENHANCED WITH FLEXBOX */
 #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: var(--spacing-sm) var(--spacing-md);
     position: sticky;
@@ -96,6 +99,7 @@ a:hover {
 
 .nav-menu {
     list-style: none;
+    display: flex;
 }
 
 .nav-menu li {
@@ -280,10 +284,11 @@ a:hover {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     width: var(--skill-level);
-    transition: width 1s ease;
     animation: fillProgress 1s ease forwards;
 }
 
+/* The --skill-level custom property set in the JSX drives the bar width,
+   so no JavaScript (Week 6 animateSkills) is needed in React. */
 @keyframes fillProgress {
     from { width: 0; }
     to { width: var(--skill-level); }
@@ -559,3 +564,31 @@ a:hover {
 .mb-1 { margin-bottom: var(--spacing-sm); }
 .mb-2 { margin-bottom: var(--spacing-md); }
 .mb-3 { margin-bottom: var(--spacing-lg); }
+
+.nav-link.active {
+    background: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        padding: var(--spacing-sm) 0;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+}

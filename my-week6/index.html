@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Nguyen - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <span>Aaron Nguyen</span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <!-- Mobile menu toggle (for bonus implementation) -->
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Aaron Nguyen</h1>
+            <p class="hero-subtitle">CS &amp; Data Science Student at UC Berkeley</p>
+            <p class="hero-tagline">Building AI agents and the backend systems that run them</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a Computer Science and Data Science major at UC Berkeley, graduating in May 2028. Most of what I work on is AI agents and the backend systems that run them. I've interned at Illumio, Screenz AI, and NVIDIA. On campus I'm in DiversaTech and the Vietnamese Student Association, and I'm an Eagle Scout.</p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <span class="detail-icon">📍</span>
+                            <span>Berkeley, CA</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">✉️</span>
+                            <a href="mailto:airrock85@berkeley.edu">airrock85@berkeley.edu</a>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-icon">💻</span>
+                            <a href="https://github.com/aaronsongnguyen">github.com/aaronsongnguyen</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-availability">
+                    <h3>Currently Available For:</h3>
+                    <div class="availability-tags">
+                        <span class="tag tag-available">Internships</span>
+                        <span class="tag tag-available">Part-Time</span>
+                        <span class="tag tag-available">Remote</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2>Skills &amp; Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🐍</span>
+                        <h3 class="skill-name">Python</h3>
+                    </div>
+                    <div class="skill-category">Programming</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--skill-level: 95%"></div>
+                    </div>
+                    <span class="skill-percentage">95%</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🤖</span>
+                        <h3 class="skill-name">LLM Agents &amp; RAG</h3>
+                    </div>
+                    <div class="skill-category">AI</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--skill-level: 90%"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🚀</span>
+                        <h3 class="skill-name">JavaScript / TypeScript</h3>
+                    </div>
+                    <div class="skill-category">Programming</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--skill-level: 85%"></div>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">⚛️</span>
+                        <h3 class="skill-name">React &amp; Next.js</h3>
+                    </div>
+                    <div class="skill-category">Frontend Framework</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--skill-level: 80%"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🌐</span>
+                        <h3 class="skill-name">Node.js &amp; Express</h3>
+                    </div>
+                    <div class="skill-category">Backend</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--skill-level: 80%"></div>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">☸️</span>
+                        <h3 class="skill-name">Docker &amp; Kubernetes</h3>
+                    </div>
+                    <div class="skill-category">Infrastructure</div>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--skill-level: 75%"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Featured Projects</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="webapp">Web App</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card featured" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x250/4f46e5/ffffff?text=Field+Medic" alt="Field Medic">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/aaronsongnguyen" class="project-link">
+                                    <span>💻</span> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Field Medic</h3>
+                            <span class="project-category">Full-Stack</span>
+                        </div>
+                        <p class="project-description">Top 3 at the Google/Qualcomm hackathon. An offline AI first-aid assistant for Android that uses the camera, speech-to-text, and on-device models to walk you through first aid with no internet.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Java</span>
+                            <span class="project-tag">Android</span>
+                            <span class="project-tag">Gemma</span>
+                            <span class="project-tag">LiteRT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="frontend">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x250/059669/ffffff?text=Data-Driven+Portfolio" alt="Data-Driven Portfolio">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/aaronsongnguyen/in-person-project-3-aaronsongnguyen" class="project-link">
+                                    <span>💻</span> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Data-Driven Portfolio</h3>
+                            <span class="project-category">Frontend</span>
+                        </div>
+                        <p class="project-description">A portfolio where all of the content lives in JavaScript objects and arrays and the page is rendered with template literals.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="webapp">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x250/dc2626/ffffff?text=Interactive+Portfolio" alt="Interactive Portfolio">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/aaronsongnguyen/in-person-project-4-aaronsongnguyen" class="project-link">
+                                    <span>💻</span> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Interactive Portfolio</h3>
+                            <span class="project-category">Web App</span>
+                        </div>
+                        <p class="project-description">This site. Smooth scrolling, project filtering, animated skill bars, and real-time form validation built with plain DOM APIs and events.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">DOM</span>
+                            <span class="project-tag">Events</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x250/7c3aed/ffffff?text=Task+Manager+UI" alt="Task Manager UI">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/aaronsongnguyen" class="project-link">
+                                    <span>💻</span> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Task Manager UI</h3>
+                            <span class="project-category">Design</span>
+                        </div>
+                        <p class="project-description">The look and feel of a task manager app, built from a design mockup with semantic HTML and CSS.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm always interested in hearing about new opportunities and projects. Feel free to reach out!</p>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group form-group-full">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Aaron Nguyen. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="https://github.com/aaronsongnguyen" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/aaron-nguyen1" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
